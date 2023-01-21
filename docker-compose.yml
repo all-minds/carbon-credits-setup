@@ -1,14 +1,14 @@
 version: '2'
 services:
   carbon-credits-property-api:
-    build: ./PropertyMicrosservice
+    build: ./PropertyAPI
     container_name: carbon_credits_property_api
     restart: always
     ports: 
       - 43896:43896
       - 5299:5299
     volumes:
-      - ./PropertyMicrosservice/PropertyAPI:/app
+      - ./PropertyAPI/PropertyAPI:/app
     environment:
       - DOTNET_URLS=http://+:5299;http://+:43896
   carbon-credits-gateway-api:
