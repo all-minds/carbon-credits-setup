@@ -26,7 +26,7 @@ services:
       - ASPNETCORE_URLS=https://+:5001;http://+:5000
   carbon-credits-owner-microsservice-api:
     build: ./OwnerAPI
-    container_name: owner_microsservice_api
+    container_name: carbon_credits_owner_microsservice_api
     restart: always
     ports: 
       - 7041:7041
