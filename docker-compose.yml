@@ -36,6 +36,13 @@ services:
     environment:
       - DOTNET_URLS=https://+:7041;http://+:5288;
       - ASPNETCORE_URLS=https://+:7041;http://+:5288;
+  carbon-credits-frontend:
+    build: ./sft-eng-front-end
+    container_name: carbon_credits_frontend
+    restart: always
+    ports: 
+      - 3000:3000
+    command: npm run dev
 volumes:
   dotnet_data:
     driver: local
